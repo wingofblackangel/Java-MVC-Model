@@ -1,0 +1,56 @@
+Introduction
+This article is about MVC framework in Java application development, from desktop applications for basic programs to enterprise solutions 
+written in Java. 
+In this article the basic concepts about MVC framework would be covered. MVC framework is used to separate the data access layer, business 
+logic code and the graphical user interface that has to be defined and designed to let the user interact with the application. This 
+plication has three parts, 
+
+Model - this part of the framework is to store the data of the application, such as databases, text data, files and/or other web resources. 
+View - this is the graphical user interface of the application. That would contain different buttons, text boxes and other controls to let 
+       the user interact with the application to complete his projects depending on sort of the software he is using. 
+Controller - the actual back-end code constitutes the controller of the framework. A controller controls the data coming from the users, 
+             or going to the user from a model. 
+             
+This sets up a condition of validation, because the stream of data (coming from or going to the user) is always validated on the 
+controller. That is why it makes the data more consistent by removing any chance of invalid data entry or unauthorized data deletion 
+from the application's data source. 
+
+Background of MVC
+In this short section I would try to provide a basic overview of the MVC framework. This section is not for Java-specific framework, 
+but for the MVC framework itself. Beginners might be interested in knowing what this MVC framework is, how it interacts, and how it 
+makes the software development efficient. But if you already know the MVC framework then you don't really want to read this section, 
+continue to the development of the application in the next section.
+
+The MVC framework, is generally a term for a software architecture for implementing the user interfaces. You can separate the software's
+source code into three different layers. 
+
+After that you can develop them separately. This way you don't have to scratch your head once your application reaches an enterprise 
+level and your source code looks a bit messy and is unable or debug. In MVC you have all your three layers separate and this way you 
+can control, develop, debug or add features to all of the layers separately. 
+
+A very good feature of the MVC framework is that is hides the data access layer from the users. That is, the data access layer or the 
+data is never actually called directly by the user; from the interface. This way, the user has to perform the actions that he is allowed
+to. This feature allows the developers to create groups or roles of users that are allowed to access the data; such as Admins, Guests 
+etc. 
+
+Another good thing about this framework is that it doesn't let the application get so complicated, and all the three segments of the 
+application interfering with each other in a single source code package. So you always know where the problem occurred. Common examples 
+of this would be, 
+
+  1. When you know that the problem is in the data access layer. For example, in the database you've allowed null entries, so now spam 
+  users would be able to leave the data inconsistent and cause a problem of redundancy. You can edit the data access layer, so that you 
+  n define the columns to not have null values. 
+  2. When the view is not showing the data correctly. Such as scenarios where binding of the data is not accurate, or the format is not 
+  correct like the format of the date and time values. You can simply just edit the View section of your application to make it work 
+  again, instead of editing the entire page containing different variables for back-end code and/or the data access code. 
+  3. When the logic is not correctly defined. Sometimes the data is correct, the view is correctly bonded to the resources, but the 
+  logic of your application is not correct. This type of problem is hard to figure out, because developer has to think about where code 
+  went wrong by giving it a rough try or by debugging the code using the IDE and putting a few breakpoints at the locations. 
+
+These are a few of the good points of the MVC framework for developing the software applications. In visual representation, the MVC 
+ramework works in this way, 
+
+Image clarifies that the user is not able to connect to the data sources himself. Instead he has to interact with the top-level layers 
+to access the data. Such as, the view, he interacts with buttons and the buttons then call the controller to perform an action on the 
+data (if required). But the data is not directly accessible by the user. This makes the data source secure from potential users; anyhow,
+there is always a threat of potential user. 
